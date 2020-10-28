@@ -15,7 +15,6 @@ function SetStartingValue() {
 
 function SetItemContent(params) {
     this.itemContent = document.getElementById("itemContent").value;
-    AddListItem();
 }
 
 function ChangeNumerics() {
@@ -30,9 +29,9 @@ function ChangeNumerics() {
 }
 
 function AddListItem() {
-    var item = document.createElement("li");
     var list = document.getElementById("list");
     var items = document.getElementsByTagName("li");
+    var item = document.createElement("li");
     item.innerHTML = itemContent ? itemContent : items.length + 1 + ". içerik";
     list.appendChild(item);
     ChangeNumerics();
